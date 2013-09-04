@@ -1,0 +1,21 @@
+﻿@using Orchard.ContentPicker.Fields
+@using Orchard.Utility.Extensions;
+@using Orchard.ContentManagement;
+
+@{
+    var field = (ContentPickerField) Model.ContentField;
+    string name = field.DisplayName;
+    var contentItems = field.ContentItems;
+}
+
+    @if(contentItems.Any()) {
+        var contentManager = WorkContext.Resolve<IContentManager>();
+        foreach(var contentItem in contentItems) {
+            var contentItemShape = contentManager.BuildDisplay(contentItem, "Summary");
+            <div>@Display(contentItemShape)</div>
+        }
+    }
+    else {
+        <span class="value">@T("No content items.")</span>
+    }
+

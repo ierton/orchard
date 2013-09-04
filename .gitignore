@@ -1,0 +1,4 @@
+*.dll
+*.exe
+App_Data/*
+

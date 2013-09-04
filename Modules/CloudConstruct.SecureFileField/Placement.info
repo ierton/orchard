@@ -1,0 +1,13 @@
+﻿<Placement>
+  <!-- SecureFileField -->
+  <Place Fields_SecureFile_Edit="Content:0"/>
+  <Place Fields_SecureFile="Content:after"/>
+
+  <Match DisplayType="SummaryAdmin">
+    <Place Fields_SecureFile="-"/>
+  </Match>
+
+  <!--Match DisplayType="Summary">
+    <Place Fields_SecureFile="-"/>
+  </Match-->
+</Placement>

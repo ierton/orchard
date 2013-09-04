@@ -1,0 +1,30 @@
+﻿@using Orchard.Utility.Extensions;
+
+@{
+    //string name = Model.ContentField.DisplayName;
+    string name = Model.ContentItem.TitlePart.Title;
+}
+<p class="secure-file-field secure-file-field-@name.HtmlClassify()">
+    @if (!String.IsNullOrWhiteSpace(Model.ContentField.Url)) {
+        if (!string.IsNullOrEmpty(Model.ContentField.SharedAccessUrl))
+        {
+            <a target="_blank" href="@(Model.ContentField.SharedAccessUrl)" class="value">@name</a>
+        }
+        else {
+            <a target="_blank" href="@(Model.ContentField.SecureUrl)" class="value">@name</a>
+        }
+    }
+</p>
+
+@* Other available properties *@
+@* 
+    Alternate Text: @Model.ContentField.AlternateText
+    Class: @Model.ContentField.Class
+    Style: @Model.ContentField.Style
+    Alignment @Model.ContentField.Alignment
+    Width: @Model.ContentField.Width
+    Height: @Model.ContentField.Height
+    
+    You can also display an image using this example, and add the attributes you need:
+    <img src="@Url.Content(Model.ContentField.Url)" />
+*@

@@ -1,0 +1,31 @@
+﻿@model CloudConstruct.SecureFileField.Fields.SecureFileField
+@using Orchard.Utility.Extensions;
+@using CloudConstruct.SecureFileField.Settings;
+
+@{
+    var settings = Model.PartFieldDefinition.Settings.GetModel<SecureFileFieldSettings>();
+    Script.Require("jQuery").AtFoot();
+}
+
+<fieldset>
+    <label for="@Html.FieldIdFor(m => m.Url)" @if(settings.Required) { <text>class="required"</text> }>@Model.DisplayName</label>
+    
+    <input type="file" name="FileField-@Model.Name" id="FileField-@Model.Name" value="@T("Browse")" />
+    
+    <h3>Current : @Model.Url</h3>
+
+
+    <span class="hint">@settings.Hint</span>
+
+
+</fieldset>
+@using (Script.Foot())
+{
+<script type="text/javascript">
+//<![CDATA[
+    $('form')
+		.attr('enctype', 'multipart/form-data')
+		.attr('encoding', 'multipart/form-data'); // ie issue
+//]]>
+</script>
+}

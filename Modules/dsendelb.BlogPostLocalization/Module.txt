@@ -1,0 +1,9 @@
+﻿Name: Blog Post Localization
+AntiForgery: enabled
+Author: David Sendelbach
+Website: https://orchardblogfix.codeplex.com/
+Version: 1.0
+OrchardVersion: 1.6
+Description: migrates translated blog post to the correct translated blog.
+Dependencies: Orchard.Blogs, Orchard.Localization, Orchard.Autoroute
+Category: Localization
