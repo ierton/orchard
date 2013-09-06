@@ -1,0 +1,17 @@
+# Orchard resource strings - ru-RU
+# Copyright (c) 2010 Outercurve Foundation
+# All rights reserved
+# This file is distributed under the BSD license
+
+#: ~/Themes/Eremex/Views/Register.cshtml
+#| msgid "Company"
+msgctxt "~/Themes/Eremex/Views/Register.cshtml"
+msgid "Company"
+msgstr "компания"
+
+#: ~/Themes/Eremex/Views/Register.cshtml
+#| msgid "Profession"
+msgctxt "~/Themes/Eremex/Views/Register.cshtml"
+msgid "Profession"
+msgstr "профессия"
+

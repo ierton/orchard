@@ -14,9 +14,6 @@
         foreach(var contentItem in contentItems) {
             var contentItemShape = contentManager.BuildDisplay(contentItem, "Summary");
             <span class="value">@Display(contentItemShape)</span>
-            if(contentItem != contentItems.Last()) {
-                <span>,</span>
-            }
         }
     }
     else {

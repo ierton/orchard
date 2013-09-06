@@ -30,13 +30,16 @@
             @Html.Password("confirmPassword") 
             @Html.ValidationMessage("confirmPassword") 
         </div>
-            @if (Model.UserProfile != null)
-            {
-                <br />
-                <fieldset>
-                @Display(Model.UserProfile)
-                </fieldset>
-            }
+        <div>
+            <label class="required" for="AdditionalProfile_Company_Value">@T("Company")</label>
+            @Html.TextBox("AdditionalProfile.Company.Value")
+            @Html.ValidationMessage("AdditionalProfile.Company.Value") 
+        </div>
+        <div>
+            <label for="AdditionalProfile_Profession_Value">@T("Profession")</label>
+            @Html.TextBox("AdditionalProfile.Profession.Value")
+            @Html.ValidationMessage("AdditionalProfile.Profession.Value") 
+        </div>
         <div>
             <button class="primaryAction" type="submit">@T("Register")</button>
         </div>
