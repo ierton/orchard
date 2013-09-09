@@ -1,5 +1,3 @@
-*.dll
-*.exe
 cache.dat
 */Logs/*
 
